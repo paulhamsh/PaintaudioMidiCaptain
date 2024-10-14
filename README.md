@@ -1,13 +1,18 @@
 # PaintaudioMidiCaptain
 Micropython to control the Paint Audio Midi Captain
 
-Based on discoveries in there repos:    
+## Information sources
+
+Based on discoveries in these repos:    
 
 ```
 https://github.com/nicola-lunghi/hiper-midicaptain
 https://github.com/gstrotmann/MidiCaptain4Kemper
 
 ```
+
+
+## Pedal layout    
 
 ```
 Switch layout
@@ -17,7 +22,7 @@ A   B   C   D   DOWN
 ````
 
 
-
+## GPIO usage    
 
 | GPIO     | Description                                             |
 |----------|---------------------------------------------------------|
@@ -51,6 +56,9 @@ A   B   C   D   DOWN
 | GPIO 27  | Expression 1                                            | 
 | GPIO 28  | Expression 2                                            | 
 | GPIO 29  |                                                         | 
+
+
+## Wifi configuration and use    
 
 Code to set and use the wifi connection - to send a sample midi message.
 It seems that both the midi uart and wifi use GPIO 16 and 17, a single uart in the RP2040.   The wifi uses baud rate 38400 and midi uart uses 31250, the midi standard.   Not sure how that works it needs further investigation.    
