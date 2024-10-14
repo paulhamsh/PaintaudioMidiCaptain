@@ -51,3 +51,43 @@ A   B   C   D   DOWN
 | GPIO 27  | Expression 1                                            | 
 | GPIO 28  | Expression 2                                            | 
 | GPIO 29  |                                                         | 
+
+Code to set and use the wifi connection - to send a sample midi message
+
+```
+from  board import GP4, GP5, GP16, GP17
+import busio
+from digitalio import DigitalInOut, Direction, Pull
+import time
+    
+uart = busio.UART(tx=GP16, rx=GP17, baudrate=9600, timeout = 0.1)
+
+chip_sel = DigitalInOut(GP4)
+chip_sel.direction = Direction.OUTPUT
+set_data = DigitalInOut(GP5)
+set_data.direction = Direction.OUTPUT
+set_data.value = False
+chip_sel.value = False
+time.sleep(0.1)
+
+config   = [0xAA, 0x5A, 0x08, 0x44, 0x11, 0x33, 0x00, 0x06, 0x00, 0x06, 0x00, 0x64, 0x00, 0x00, 0x00, 0x12, 0x00, 0x16]
+
+uart.write(bytes(config))
+time.sleep(0.3)
+print("".join(" x%02x" % i for i in config))
+recv = uart.read(18)
+print("".join(" x%02x" % i for i in recv))
+
+set_data.value = True
+
+# change baudrate
+uart.baudrate = 38400
+
+# simple MIDI message - Eb note on
+msg = [0x80, 0x33, 0x7f] 
+
+while True:
+    uart.write(bytes(msg))
+    time.sleep(1)
+```
+
