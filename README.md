@@ -52,7 +52,10 @@ A   B   C   D   DOWN
 | GPIO 28  | Expression 2                                            | 
 | GPIO 29  |                                                         | 
 
-Code to set and use the wifi connection - to send a sample midi message
+Code to set and use the wifi connection - to send a sample midi message.
+It seems that both the midi uart and wifi use GPIO 16 and 17, a single uart in the RP2040.   The wifi uses baud rate 38400 and midi uart uses 31250, the midi standard.   Not sure how that works it needs further investigation.    
+The initialisation of the BK2461 board is at 9600 baud and it seems to forget the configuration between reboots.   
+The configuration data has a different format the LC12S board, which seems to be the closest commercially available BK2461 board.  Same start bytes, length and general format, but different in the address use.   
 
 ```
 from  board import GP4, GP5, GP16, GP17
