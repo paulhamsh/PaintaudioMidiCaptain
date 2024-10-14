@@ -17,8 +17,8 @@ https://github.com/gstrotmann/MidiCaptain4Kemper
 | GPIO 1  | Switch 1 | 
 | GPIO 2  | ? | 
 | GPIO 3  | ? | 
-| GPIO 4  | LC12S CSW | 
-| GPIO 5  | LC12S SETW | 
+| GPIO 4  | LC12S Chip Select (low) | 
+| GPIO 5  | LC12S Set Data / Command (data is high, command is low) | 
 | GPIO 6  |  | 
 | GPIO 7  | Neopixel | 
 | GPIO 8  |  | 
