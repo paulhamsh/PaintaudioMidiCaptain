@@ -30,10 +30,10 @@ A   B   C   D   DOWN
 
 | GPIO     | Description                                             |
 |----------|---------------------------------------------------------|
-| GPIO 0   | Rotary encoder                                          | 
+| GPIO 0   | Rotary encoder switch                                   | 
 | GPIO 1   | Switch 1                                                | 
-| GPIO 2   | ?                                                       | 
-| GPIO 3   | ?                                                       | 
+| GPIO 2   | Rotary encoder A                                        | 
+| GPIO 3   | Rotary encoder B                                        |  
 | GPIO 4   | LC12S Chip Select (low)                                 | 
 | GPIO 5   | LC12S Set Data / Command (data is high, command is low) | 
 | GPIO 6   |                                                         | 
