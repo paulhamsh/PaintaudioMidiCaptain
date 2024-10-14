@@ -1,5 +1,9 @@
 # PaintaudioMidiCaptain
-Micropython to control the Paint Audio Midi Captain
+Micropython to control the Paint Audio Midi Captain.   
+This is a fascinating pedal with ten switches with three neopixel indicators per switch, a ST7789 TFT display, rotary encoder, uart midi, wireless midi and two expression pedals.    
+It uses the Raspberry Pi RP2040 microntroller chip.   
+
+The wireless midi is 2.4GHz but not using the BLE protocol. It uses a BK2461 chip (which runs a similar radio interface as the nRF24L01).   
 
 ## Information sources
 
@@ -58,11 +62,11 @@ A   B   C   D   DOWN
 | GPIO 29  |                                                         | 
 
 
-## Wifi configuration and use    
+## Wireless configuration and use    
 
-Code to set and use the wifi connection - to send a sample midi message.
-It seems that both the midi uart and wifi use GPIO 16 and 17, a single uart in the RP2040.   The wifi uses baud rate 38400 and midi uart uses 31250, the midi standard.   Not sure how that works it needs further investigation.    
-The initialisation of the BK2461 board is at 9600 baud and it seems to forget the configuration between reboots.   
+Code to set and use the wireless connection - to send a sample midi message.
+It seems that both the midi uart and wireless midi use GPIO 16 and 17, a single uart in the RP2040.   The wireless midi uses baud rate 38,400 and midi uart uses 31,250, the midi standard.   Not sure how that works it needs further investigation.    
+The initialisation of the BK2461 board is at 9,600 baud and it seems to forget the configuration between reboots.   
 The configuration data has a different format the LC12S board, which seems to be the closest commercially available BK2461 board.  Same start bytes, length and general format, but different in the address use.   
 
 ```
