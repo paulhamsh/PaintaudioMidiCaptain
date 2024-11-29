@@ -4,6 +4,16 @@ This is a fascinating pedal with ten switches with three neopixel indicators per
 It uses the Raspberry Pi RP2040 microntroller chip.   
 
 
+| ** Class  **                                                      |
+| Constituency                                       | 
+| **Fields  **                                                   |
+
+| Name: string                                        |    
+| Region: string                                      |
+| Country: string                                   |
+
+
+
 The wireless midi is 2.4GHz but not using the BLE protocol. It uses a BK2461 chip (which runs a similar radio interface as the nRF24L01).   
 
 ## Information sources
