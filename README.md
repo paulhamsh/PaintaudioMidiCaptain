@@ -7,7 +7,7 @@ It uses the Raspberry Pi RP2040 microntroller chip.
 | ** Class  **                   |
 |--------------------------------|
 | Constituency                                       | 
-| **Fields  **                                                   |
+| ** Fields **                                                   |
 | Name: string                                        |    
 | Region: string                                      |
 | Country: string                                   |
