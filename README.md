@@ -3,14 +3,14 @@ Micropython to control the Paint Audio Midi Captain.
 This is a fascinating pedal with ten switches with three neopixel indicators per switch, a ST7789 TFT display, rotary encoder, uart midi, wireless midi and two expression pedals.    
 It uses the Raspberry Pi RP2040 microntroller chip.   
 
-
-| **Class**               |
-|--------------------------------|
+| **Class**                                                        |
+|-----------------------------------------|
 | Constituency                                       | 
-| **Fields**                                                   |
+| **Fields**                                                    |
 | Name: string                                        |    
 | Region: string                                      |
 | Country: string                                   |
+
 
 
 
