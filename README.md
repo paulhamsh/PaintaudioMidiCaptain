@@ -4,10 +4,10 @@ This is a fascinating pedal with ten switches with three neopixel indicators per
 It uses the Raspberry Pi RP2040 microntroller chip.   
 
 
-| ** Class  **                                                      |
+| ** Class  **                   |
+|--------------------------------|
 | Constituency                                       | 
 | **Fields  **                                                   |
-
 | Name: string                                        |    
 | Region: string                                      |
 | Country: string                                   |
